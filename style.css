@@ -1,0 +1,143 @@
+/* General */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f9f9f9, #add8e6);
+    color: #333;
+}
+
+/* Headers */
+.title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.5em;
+    margin: 20px 0;
+}
+
+.subtitle {
+    margin-top: 40px;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* Cards */
+.card, .form-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover, .form-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Buttons */
+.primary-button, .secondary-button {
+    background: #ff7f50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.secondary-button {
+    background: #20B2AA;
+}
+
+.primary-button:hover {
+    background: #ff6347;
+    transform: scale(1.05);
+}
+
+.secondary-button:hover {
+    background: #20B2AA;
+    transform: scale(1.05);
+}
+
+/* Inputs and Textarea */
+.input-field, .textarea-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus, .textarea-field:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Table */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    text-align: left;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.styled-table th {
+    background: #ff7f50;
+    color: white;
+}
+
+.styled-table tbody tr:nth-child(even) {
+    background: #f3f3f3;
+}
+
+/* Links */
+.link {
+    color: #007BFF;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.link:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+/* Auth Section */
+.auth-section {
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.footer a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Question to Self</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="authSection" class="auth-section" style="display: none; margin: 10vh auto; padding-bottom: 20px;">
+        <form id="loginForm" class="form-card">
+            <h2 class="form-title">Login</h2>
+            <input type="email" id="loginEmail" class="input-field" placeholder="Email" required />
+            <input type="password" id="loginPassword" class="input-field" placeholder="Password" required autocomplete="current-password" />
+            <button id="loginButton" type="button" class="primary-button">Login</button>
+            <p class="form-link">Don't have an account? <span id="showSignup" class="link">Sign Up</span></p>
+            <p class="form-link"><span id="resetPassword" class="link">Forgot Password?</span></p>
+        </form>
+    
+        <form id="signupForm" class="form-card" style="display: none;">
+            <h2 class="form-title">Sign Up</h2>
+            <input type="email" id="signupEmail" class="input-field" placeholder="Email" required />
+            <input type="password" id="signupPassword" class="input-field" placeholder="Password" required autocomplete="current-password" />
+            <button id="signupButton" type="button" class="primary-button">Sign Up</button>
+            <p class="form-link">Already have an account? <span id="showLogin" class="link">Login</span></p>
+        </form>
+    </div>
+    <div class="container" style="display: none;">
+        <header>
+            <h1 class="title" id="appTitle" style="display: none;">Daily Question to Self</h1>
+        </header>
+        <div id="latestUnansweredContainer" class="card" style="display: none;">
+            <p id="latestUnanswered">No unanswered questions available.</p>
+            <button id="generateNewButton" class="secondary-button">Generate New</button>
+        </div>
+        <form id="answerForm" class="form-card" style="display: none;">
+            <textarea id="userAnswer" class="textarea-field" placeholder="Enter your answer..." required style="resize: vertical; font-family: 'Poppins', sans-serif; max-width: 90%; margin-left: auto; margin-right: auto;"></textarea>
+            <button type="submit" class="primary-button">Submit Answer</button>
+        </form>
+        <section id="latestAnswerSection" class="card" style="display: none;">
+            <h2>Latest Answer</h2>
+            <p><strong>Question:</strong> <span id="latestQuestion">No question available</span></p>
+            <p><strong>AI Guess:</strong> <span id="latestLlmAnswer">No answer yet</span></p>
+            <p><strong>Your Answer:</strong> <span id="latestUserAnswer">No answer yet</span></p>
+        </section>
+        <h2 class="subtitle">History of Answers</h2>
+        <table id="answersTable" class="styled-table" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Date Question Created</th>
+                    <th>Question</th>
+                    <th>LLM Answer</th>
+                    <th>User Answer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+    <div id="userInfo" class="auth-section" style="display: none; margin-bottom: 20px;">        
+        <p>Welcome, <span id="userEmail" class="highlight"></span>!</p>
+        <button id="logoutButton" class="secondary-button">Log Out</button>
+    </div>    
+    <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-auth-compat.js"></script>    
+    <script src="script.js"></script>
+</body>
+</html>
